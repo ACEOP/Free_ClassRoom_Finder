@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Availability Finder with OCR</title>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Classroom Availability Finder with OCR</h1>
+        <input type="file" id="fileInput" accept="application/pdf">
+        
+        <h3>Select the day of the week:</h3>
+        <select id="dayOfWeek">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+        
+        <h3>Select your desired time slot:</h3>
+        <select id="timeSlot">
+            <option value="08:00-08:55">8:00 - 8:55</option>
+            <option value="08:55-09:50">8:55 - 9:50</option>
+            <option value="10:10-11:05">10:10 - 11:05</option>
+            <option value="11:05-12:00">11:05 - 12:00</option>
+            <option value="12:00-12:55">12:00 - 12:55</option>
+            <option value="12:55-13:50">12:55 - 1:50</option>
+            <option value="14:10-15:05">2:10 - 3:05</option>
+            <option value="15:05-16:00">3:05 - 4:00</option>
+            <option value="16:00-16:55">4:00 - 4:55</option>
+            <option value="16:55-17:55">4:55 - 5:55</option>
+        </select>
+        
+        <button onclick="findFreeClassroom()">Find Free Classroom</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
